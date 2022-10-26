@@ -1,5 +1,7 @@
 import requests
 
+word = input("商品名を入力してください:")
+
 # 楽天商品検索API (BooksGenre/Search/)のURL
 url = "https://app.rakuten.co.jp/services/api/IchibaItem/Search/20170706"
 
@@ -7,7 +9,7 @@ url = "https://app.rakuten.co.jp/services/api/IchibaItem/Search/20170706"
 param = {
     # 取得したアプリIDを設定する
     "applicationId" : "1072722666659103303",
-    "keyword" : "Pythonではじめる機械学習　scikit-learnで学ぶ特徴量エンジニアリングと機械学習の基礎",
+    "keyword" : f"{word}",
     "format" : "json"
 }
 
